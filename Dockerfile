@@ -16,7 +16,7 @@ RUN codename=$(lsb_release -c -s) && \
 
 # install R libraries
 RUN R -e 'install.packages(c("ggplot2","caret","tidyr","stringr","caretEnsemble","party","devtools","randomForest","ada","doMC","evaluate","formatR","highr","markdown","yaml","htmltools","caTools","bitops","knitr","rmarkdown","ROCR","gplots","dplyr","plyr","pROC","e1071","gbm","lubridate","data.table","logging","GA","lineprof","profvis","RJDBC","assertthat","lazy","scales","zoo","Hmisc","arules","arulesNBMiner","arulesSequences","arulesViz","methods","statmod","stats","graphics","RCurl","jsonlite","tools","utils","GGally","readr","caTools","ranger"), repos="http://cran.freestatistics.org/", dependencies=T,clean=TRUE)'  && \
-	R -e 'install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/rel-tutte/1/R")))' && \
+	R -e 'install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/rel-ueno/5/R")))' && \
 	R -e 'update.packages(ask=FALSE,repos="http://cran.freestatistics.org/")'
 		
 # install RStudio
